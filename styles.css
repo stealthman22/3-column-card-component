@@ -15,7 +15,8 @@
 
 html,body {
  font-size: 15px;
- line-height: 150%;
+ line-height: 170%;
+ background-color: var(--bg-color);
 }
 
 
@@ -23,12 +24,12 @@ html,body {
  display: flex;
 align-items: center;
 justify-content: center;
- height: 95vh;
+ min-height: 95vh;
 }
 
 .card {
- height: 55vh;
-width: 16vw;
+ height: 30rem;
+width: 20rem;
 }
 
 
@@ -58,18 +59,20 @@ background: url(./images//icon-suvs.svg) no-repeat;
 
 .card-content {
  margin: 0.5rem 1.6rem 0 1.6rem; 
+ padding: 0.5rem 1rem;
  height: 50%;
 }
 
 .card-content > h1{
 font-family: var(--bg-font);
 color: var(--bg-color);
+font-size: 2.5em;
 }
 
 .card-content > p {
  font-family: var(--txt-font);
  color: var(--txt-color);
- margin-top: 1rem;
+ margin-top: 1.8rem;
 }
 
 
@@ -89,21 +92,31 @@ color: var(--bg-color);
 
 /* buttons */
 .cta {
- margin: 0.5rem 1.6rem 0 1.6rem; 
- padding: 1rem 2rem;
+ margin: 0.1rem 1.6rem 0 2.2rem; 
+ padding: 0.8rem 2.3rem;
  background-color: var(--bg-color);
- border: 1px solid var(--bg-color);
-border-radius: 20px;
-border:  none;
+ border: 2px solid var(--bg-color);
+border-radius: 30px;
 outline: none;
 cursor: pointer;
 text-align: center;
+font: var(--bg-font);
+font-size: 1.2em;
 }
 
+.cta:hover {
+ background-color: transparent; 
+ transition: background-color 0.3s ease-in-out;
+}
 
 
 .card-1 > .cta {
  color: var(--orange-primary);
+}
+
+.card-1 > .cta:hover, .card-2 > .cta:hover, .card-3 > .cta:hover {
+ color: var(--txt-color);
+
 }
 
 .card-2 > .cta {
@@ -122,3 +135,66 @@ text-align: center;
  color: hsl(228, 45%, 44%);
  }
 
+
+ /* @media  screen and (max-width: 1540px) {
+  .card {
+   height: 70vh;
+  width: 22vw;
+  }
+ } */
+
+ @media  screen and (max-width: 1200px) {
+  .card {
+  width: 18rem;
+  }
+ }
+
+ /* @media  screen and (max-width: 950px) {
+  .container {
+   margin: 0 3rem;
+  }
+ } */
+
+ /* @media  screen and (max-width: 1008px) {
+  .card {
+   height: 61vh;
+  width: 30vw;
+  }
+ } */
+
+ /* @media  screen and (max-width: 840px) {
+  .card {
+  width: 32vw;
+  }
+ } */
+
+ /* @media  screen and (max-width: 780px) {
+  .card {
+  width: 28vw;
+  }
+ } */
+
+ @media  screen and (max-width: 700px) {
+  .container {
+   margin: 3rem 0;
+   flex-direction: column;
+   align-items: center;
+justify-content: center;
+   min-height: 100vh;
+  }
+
+
+  .card {
+   height: 55vh;
+  width: 50vw;
+  }
+
+  .card-1 {
+   border-radius: 5px  5px 0 0 ;
+  }
+
+  .card-3 {
+   background-color: var(--very-dark-cyan-primary);
+   border-radius: 0 0 5px 5px ;
+  }
+ }
